@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+.primary-btn {
+    background-color: #65b0f6;
+}
+
+.primary-crl {
+    color: #65b0f6;
+}
+
+.bg-primary {
+    background-color: #65b0f6;
+}
+
+.category:hover .image {
+    transform: translateY(0);
+}
+
+.category:hover h2 {
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
+
+.product:hover .add-to-cart  {
+    display: block;
+}
+
+.border-primary {
+  border-color: #65b0f6;
+}
