@@ -7,7 +7,7 @@ import React from 'react'
 
 const Header = () => {
 
-  const {openCart} = useAppContext()
+  const {openCart, openSidebar} = useAppContext()
 
   return (
     <header className="bg-white drop-shadow-sm">
@@ -39,7 +39,8 @@ const Header = () => {
 
             <button
               className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-            >
+                onClick={openSidebar}
+           >
               <span className="sr-only">Toggle menu</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,13 +1,14 @@
 "use client"
 import { createContext, useContext, useReducer } from "react"
 import app_reducer from "@/reducer/App_reducer"
-import { CLOSE_CART, OPEN_CART } from "@/Actions"
+import { CLOSE_CART, CLOSE_SIDEBAR, OPEN_CART, OPEN_SIDEBAR } from "@/Actions"
 
 const initialSate = {
     isCartOpened: false,
     products: [],
     loading: false,
-    isAuth: false
+    isAuth: false,
+    isSidebarActive: false
 }
 
 const AppContext = createContext()
@@ -25,7 +26,15 @@ export const AppProvider = ({ children }) => {
         dispatch({ type: CLOSE_CART })
     }
 
-    return <AppContext.Provider value={{ ...state, openCart, closeCart }} >
+    // Sidebar menu
+    const openSidebar = () => {
+        dispatch({ type: OPEN_SIDEBAR })
+    }
+    const closeSidebar = () => {
+        dispatch({ type: CLOSE_SIDEBAR })
+    }
+
+    return <AppContext.Provider value={{ ...state, openCart, openSidebar, closeSidebar, closeCart }} >
         {children}
     </AppContext.Provider>
 }

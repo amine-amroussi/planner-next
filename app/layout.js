@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { AppProvider } from '@/context/app_context'
 import Cart from '@/components/Cart'
+import Sidebar from '@/components/Sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
         <AppProvider>
 
           <Header />
-
+          <Sidebar />
           <main className='mx-auto min-h-screen max-w-screen-xl items-center relative gap-8 px-4 sm:px-6 lg:px-8'>
             <div className='absolute right-10 top-0'>
               <Cart />

@@ -1,4 +1,4 @@
-import { CLOSE_CART, OPEN_CART } from "@/Actions"
+import { CLOSE_CART, CLOSE_SIDEBAR, OPEN_CART, OPEN_SIDEBAR } from "@/Actions"
 
 const app_reducer = (state, action) => {
 
@@ -8,6 +8,15 @@ const app_reducer = (state, action) => {
     }
      if (action.type === CLOSE_CART) {
         return {...state, isCartOpened : false}
+    }
+
+
+    // Sidebar Functions
+    if (action.type === OPEN_SIDEBAR) {
+        return {...state, isSidebarActive : true}
+    }
+    if (action.type === CLOSE_SIDEBAR) {
+        return {...state, isSidebarActive : false}
     }
     return state
 }
