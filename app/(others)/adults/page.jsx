@@ -7,7 +7,7 @@ const page = () => {
     return (
         <div>
             <div className='w-full h-[350px] my-10 overflow-hidden rounded-lg relative' >
-                <Image src='/adults-banner.jpg' fill objectFit='cover' className='' />
+                <Image src='/adults-banner.jpg' fill objectFit='cover' alt='si' />
             </div>
             <h1 className='text-4xl'>Pour Les Enfants</h1>
             <p className='text-gray-400 my-8' >(20) Produits</p>

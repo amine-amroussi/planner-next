@@ -1,12 +1,15 @@
+import Image from "next/image"
 
 function CartItem() {
     return (
         <div className="flex items-start justify-between gap-4 py-8">
             <div className="flex max-sm:flex-col gap-6">
-                <div className="h-40 bg-gray-100 p-4 rounded">
-                    <img
+                <div className="h-40 bg-gray-100  rounded relative w-40 p-4 overflow-hidden">
+                    <Image
                         src="/product.jpg"
-                        className="w-full h-full object-contain shrink-0"
+                        className="w-full h-full object-cover shrink-0"
+                        alt='si'
+                        fill
                     />
                 </div>
                 <div>

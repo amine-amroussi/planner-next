@@ -23,7 +23,7 @@ const Sidebar = () => {
                 <div className='my-3'>
                     <ul>
                         {urls.map(url => (
-                            <li className='my-2 w-full'>
+                            <li className='my-2 w-full' key={url.link}>
                                 <Link href={url.link} className='block bg-gray-100 p-3 rounded-md transition ease-in-out delay-100 hover:bg-gray-200' >{url.label}</Link>
                             </li>
                         ))}

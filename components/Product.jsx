@@ -6,10 +6,11 @@ function Product() {
     return (
         <article className="lg:w-1/4 md:w-1/2 p-4 w-full">
             <Link href='/products/123' className="block relative h-48 rounded overflow-hidden">
-                <img
+                <Image
                     alt="ecommerce"
                     className="object-cover object-center w-full h-full block"
                     src="/product.jpg"
+                    fill
                 />
             </Link>
             <div className="mt-4">

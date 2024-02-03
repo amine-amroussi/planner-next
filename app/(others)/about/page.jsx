@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
@@ -108,11 +109,12 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center">
-                    <img
+                <div className="flex justify-center items-center relative">
+                    <Image
                         src="/about-img.svg"
                         alt="Placeholder Image"
                         className="rounded-lg object-cover w-full h-full"
+                        fill
                     />
                 </div>
             </div>
